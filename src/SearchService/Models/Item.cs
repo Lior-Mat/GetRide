@@ -1,4 +1,5 @@
 using System;
+using MongoDB.Driver;
 using MongoDB.Entities;
 
 namespace SearchService;
@@ -24,4 +25,8 @@ public class Item : Entity
     public int Year { get; set; }
     public string ImageUrl { get; set; }
 
+    internal SortDefinition<Item> Ascending(Func<object, object> value)
+    {
+        throw new NotImplementedException();
+    }
 }
